@@ -7,6 +7,7 @@ const uglify         = require('gulp-uglify');
 const imagemin       = require('gulp-imagemin');
 const del            = require('del');
 const browserSync    = require('browser-sync').create();
+const plumber        = require('gulp-plumber');
 
 
 function browsersync() {
@@ -23,6 +24,12 @@ function browsersync() {
 
 function styles() {
   return src('app/scss/style.scss')
+  .pipe(plumber({
+    errorHandler: function (err) {
+      console.log(err);
+      this.emit('end');
+    }
+  }))
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
