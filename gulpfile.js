@@ -15,7 +15,8 @@ function browsersync() {
     server: {
       baseDir: 'app/'
     },
-    notify: false
+    notify: false,
+    browser: 'C:/Users/Никита/AppData/Local/Yandex/YandexBrowser/Application/browser.exe'
   })
 }
 
@@ -85,7 +86,7 @@ function cleanDist() {
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html', '!app/page.html']).on('change', browserSync.reload);
+  watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
 
