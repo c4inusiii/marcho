@@ -15,7 +15,8 @@ function browsersync() {
     server: {
       baseDir: 'app/'
     },
-    notify: false
+    notify: false,
+    browser: 'C:/Users/Никита/AppData/Local/Yandex/YandexBrowser/Application/browser.exe'
   })
 }
 
@@ -43,6 +44,8 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -96,5 +99,5 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync,watching);
+exports.default = parallel(browsersync, watching);
 
