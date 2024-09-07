@@ -440,4 +440,125 @@
   }
 }
 
+.product {
+  padding: 105px 0 120px;
+  text-align: center;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 45px 30px;
+    margin-bottom: 55px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $title;
+    display: inline-block;
+    border: 1px solid $accent;
+    padding: 14px 27px;
+  }
+}
+
+.product-item {
+  max-width: 370px;
+
+  &__img-box {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+
+  &__link-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    background-color: #fff;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(300%);
+    transition: all .3s;
+  }
+
+  &__link {
+    display: inherit;
+
+    path {
+      transition: all .2s;
+    }
+  }
+
+  &__link:hover {
+    path {
+      fill: $accent;
+    }
+  }
+
+
+  &__link-line::before,
+  &__link-line::after {
+    position: absolute;
+    content: "";
+    background-color: #ececec;
+    width: 1px;
+    height: 30px;
+    top: 10px;
+  }
+
+  &__link-line::before {
+    left: 70px;
+  }
+
+  &__link-line::after {
+    right: 70px;
+  }
+
+  &__images {
+    object-fit: cover;
+  }
+
+  &:hover {
+    .product-item__link-box {
+      transform: translateY(0);
+    }
+  }
+
+  &__title {
+    color: $title;
+    padding: 15px 0 10px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    gap: 0 24px;
+    @extend %roboto-400;
+    color: $title;
+  }
+
+  &__old-price {
+    color: $default;
+    text-decoration: line-through;
+  }
+  &--sale{
+    .product-item__img-box::before {
+      position: absolute;
+      content: "SALE";
+      @extend %btn;
+      left: 25px;
+      top: 25px;
+      padding: 6px 15px;
+    }
+  }
+}
+
 @import "media";
