@@ -171,6 +171,18 @@
   }
 }
 
+.top{
+  &__container{
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 120px 0 130px;
+    text-align: center;
+  }
+}
+
 .top-slider {
   background-image: url(../images/decor/top-slider-bg.png);
   background-repeat: no-repeat;
@@ -650,7 +662,8 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    &::after{
+
+    &::after {
       position: absolute;
       content: "";
       background-image: url('../images/decor/blog-decor.svg');
@@ -674,7 +687,8 @@
 
       .blog__item-link {
         color: $accent;
-        &::after{
+
+        &::after {
           background-image: url('../images/icons/arrow-accent.svg');
         }
       }
@@ -749,5 +763,69 @@
     }
   }
 }
+
+.modal{
+  padding-top: 100px;
+  max-width: 570px;
+  margin: 0 auto 115px;
+  &__links{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__link{
+    color: #909090;
+    font-size: 22px;
+    @extend %roboto-400;
+    text-transform: uppercase;
+    margin: 0 30px;
+  }
+  &__link--active{
+    color: $accent;
+    @extend %roboto-700;
+  }
+  &__label{
+    display: block;
+    margin-bottom: 30px;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: $bg;
+    margin-top: 8px;
+    height: 60px;
+    padding: 0 15px;
+  }
+  &__btn{
+    display: block;
+    background-color: $title;
+    color: #fff;
+    @extend %roboto-400;
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    cursor: pointer;
+  }
+  &__error{
+    margin-top: 12px;
+    display: inline-block;
+    color: $accent;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @import "media";
