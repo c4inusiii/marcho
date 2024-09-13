@@ -171,8 +171,8 @@
   }
 }
 
-.top{
-  &__container{
+.top {
+  &__container {
     max-width: 1700px;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -764,30 +764,35 @@
   }
 }
 
-.modal{
+.modal {
   padding-top: 100px;
   max-width: 570px;
   margin: 0 auto 115px;
-  &__links{
+
+  &__links {
     text-align: center;
     margin-bottom: 40px;
   }
-  &__link{
+
+  &__link {
     color: #909090;
     font-size: 22px;
     @extend %roboto-400;
     text-transform: uppercase;
     margin: 0 30px;
   }
-  &__link--active{
+
+  &__link--active {
     color: $accent;
     @extend %roboto-700;
   }
-  &__label{
+
+  &__label {
     display: block;
     margin-bottom: 30px;
   }
-  &__input{
+
+  &__input {
     display: block;
     width: 100%;
     border: none;
@@ -796,7 +801,8 @@
     height: 60px;
     padding: 0 15px;
   }
-  &__btn{
+
+  &__btn {
     display: block;
     background-color: $title;
     color: #fff;
@@ -806,13 +812,49 @@
     border: none;
     cursor: pointer;
   }
-  &__error{
+
+  &__error {
     margin-top: 12px;
     display: inline-block;
     color: $accent;
   }
-  &__text{
+
+  &__text {
     margin-bottom: 25px;
+  }
+}
+
+.page-404 {
+  padding: 110px 0 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 48px;
+    @extend %roboto-700;
+    color: #28384f;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 55px;
+    max-width: 470px;
+  }
+
+  &__link {
+    @extend %btn;
+    padding: 15px 32px;
+    box-shadow: 0px 5px 25px 0px rgba(254, 62, 87, 0.35);
+
   }
 }
 
