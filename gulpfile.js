@@ -29,6 +29,7 @@ function styles() {
     'node_modules/rateyo/src/jquery.rateyo.css',
     'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
     'app/scss/style.scss'
   ])
   .pipe(plumber({
