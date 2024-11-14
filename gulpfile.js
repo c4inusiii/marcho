@@ -16,7 +16,6 @@ function browsersync() {
       baseDir: 'app/'
     },
     notify: false,
-    browser: 'C:/Users/Никита/AppData/Local/Yandex/YandexBrowser/Application/browser.exe'
   })
 }
 
