@@ -16,7 +16,6 @@ function browsersync() {
       baseDir: 'app/'
     },
     notify: false,
-    browser: 'C:/Users/Никита/AppData/Local/Yandex/YandexBrowser/Application/browser.exe'
   })
 }
 
@@ -27,6 +26,9 @@ function styles() {
   return src([
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
     'node_modules/rateyo/src/jquery.rateyo.css',
+    'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+    // 'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
     'app/scss/style.scss'
   ])
   .pipe(plumber({
@@ -51,6 +53,8 @@ function scripts() {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
