@@ -1,1 +1,6 @@
-@import '../../node_modules/slick-carousel/slick/slick.scss';
+@use "../../node_modules/slick-carousel/slick/slick.scss" as *;
+@use "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" as *;
+@use "../../node_modules/rateyo/src/jquery.rateyo.css" as *;
+@use "../../node_modules/ion-rangeslider/css/ion.rangeSlider.css" as *;
+@use "../../node_modules/jquery-form-styler/dist/jquery.formstyler.css";
+// @use "../../jquery-form-styler/dist/jquery.formstyler.theme.css" as *;
