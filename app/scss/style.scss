@@ -1,8 +1,8 @@
-@import "vars";
-@import "fonts";
-@import "reset";
-@import "libs";
-@import "global";
+@use "reset" as *;
+@use "fonts" as *;
+@use "libs" as *;
+@use "vars" as *;
+@use "global" as *;
 
 .header {
   padding: 40px 0;
@@ -2241,4 +2241,3 @@
   }
 }
 
-@import "media";
