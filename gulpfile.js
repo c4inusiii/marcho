@@ -9,7 +9,7 @@ const del             = require('del');
 const browserSync     = require('browser-sync').create();
 const plumber         = require('gulp-plumber');
 const nunjucksRender  = require('gulp-nunjucks-render');
-const rename  = require('gulp-rename');
+const rename          = require('gulp-rename');
 
 
 function browsersync() {
@@ -34,7 +34,7 @@ function styles() {
       this.emit('end');
     }
   }))
-    .pipe(scss({outputStyle: 'compressed'}))
+    .pipe(scss({outputStyle: 'compressed', silenceDeprecations: ['legacy-js-api']}))
     .pipe(rename({
       suffix: '.min'
     }))

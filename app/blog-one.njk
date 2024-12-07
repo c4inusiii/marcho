@@ -13,29 +13,9 @@
   {% include ('app/modules/_header/_header.html') %}
 
   <main class="main">
-    <section class="top">
-      <div class="top__container" style="background-image: url('images/top-bg.jpg');">
-        <div class="container">
-          <h2 class="top__title title">
-            BLOG DETAILS
-          </h2>
-          <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="#">
-                  Home
-                </a>
-              </li>
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="#">
-                  Blog details
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+
+    {% include ('app/modules/_top/_top.html') %}
+    
     <section class="blog-page blog-one">
       <div class="container">
         <div class="blog-page__inner">

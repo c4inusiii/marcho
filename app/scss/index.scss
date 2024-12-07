@@ -5,5 +5,13 @@
 @use "../../node_modules/rateyo/src/jquery.rateyo.css" as *;
 @use "vars" as *;
 @use "global" as *;
+
 @use "../modules/_header/_header.scss" as *;
+@use "../modules/_top-slider/_top-slider.scss" as *;
+@use "../modules/_categories-info/_categories-info.scss" as *;
+@use "../modules/_video-fashion/_video-fashion.scss" as *;
+@use "../modules/_product/_product.scss" as *;
+@use "../modules/_promo/_promo.scss" as *;
+@use "../modules/_partners/_partners.scss" as *;
+@use "../modules/_blog/_blog.scss" as *;
 @use "../modules/_footer/_footer.scss" as *;
